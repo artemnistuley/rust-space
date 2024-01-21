@@ -80,7 +80,7 @@ fn main() {
         reply: false,
         retweet: false,
     };
-    // println!("{}", tweet.summarize());
+    println!("{}", tweet.summarize());
 
     let article = NewsArticle {
         headline: String::from("Penguins win the Stanley Cup Championship!"),
@@ -91,7 +91,7 @@ fn main() {
              hockey team in the NHL.",
         ),
     };
-    // println!("{}", article.summarize());
+    println!("{}", article.summarize());
 
     notify(&tweet);
     notify(&article);
