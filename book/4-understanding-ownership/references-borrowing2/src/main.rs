@@ -16,7 +16,7 @@ fn main() {
     let r5 = &s3;
     let r6 = &s3;
     // let r7 = &mut s3; // error
-    // println!("{}, {}, and {}", r3, r4, r5);
+    // println!("{}, {}, and {}", r5, r6, r7);
 
 
     let mut s4 = String::from("hello");
