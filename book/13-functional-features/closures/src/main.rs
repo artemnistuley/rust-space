@@ -34,24 +34,24 @@ impl Inventory {
     }
 }
 
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 fn main() {
     // example 1
     let store = Inventory {
         shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],
     };
-
     let user_pref1 = Some(ShirtColor::Red);
     let giveaway1 = store.giveaway(user_pref1);
-    println!(
-        "The user with preference {:?} gets {:?}",
-        user_pref1, giveaway1
-    );
+    println!("The user with preference {:?} gets {:?}", user_pref1, giveaway1);
+
     let user_pref2 = None;
     let giveaway2 = store.giveaway(user_pref2);
-    println!(
-        "The user with preference {:?} gets {:?}",
-        user_pref2, giveaway2
-    );
+    println!("The user with preference {:?} gets {:?}", user_pref2, giveaway2);
 
 
     // example 2
@@ -60,6 +60,7 @@ fn main() {
         thread::sleep(Duration::from_secs(2));
         num
     };
+    println!("{}", expensive_closure(10));
 
 
     // example 3
@@ -111,10 +112,3 @@ fn main() {
     list.sort_by_key(|r| r.width);
     println!("{:#?}", list);
 }
-
-#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
